@@ -2,12 +2,12 @@ import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:note_taking_application/model/note.dart';
 
-class NotesDatabse {
-  static final NotesDatabse instance = NotesDatabse._init();
+class NotesDatabase {
+  static final NotesDatabase instance = NotesDatabase._init();
 
   static Database? _database;
 
-  NotesDatabse._init();
+  NotesDatabase._init();
 
   Future<Database> get database async {
     if (_database != null) {
@@ -38,7 +38,7 @@ class NotesDatabse {
         ${NoteFiels.number} $integerType,
         ${NoteFiels.title} $textType,
         ${NoteFiels.description} $textType,
-        ${NoteFiels.time} $textType,
+        ${NoteFiels.time} $textType
       )
     ''');
   }
