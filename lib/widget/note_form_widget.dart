@@ -6,7 +6,6 @@ class NoteFormWidget extends StatelessWidget {
   final String? title;
   final String? description;
   final ValueChanged<bool> onChangedImportant;
-  final ValueChanged<int> onChangedNumber;
   final ValueChanged<String> onChangedTitle;
   final ValueChanged<String> onChangedDescription;
 
@@ -17,7 +16,6 @@ class NoteFormWidget extends StatelessWidget {
     this.title = '',
     this.description = '',
     required this.onChangedImportant,
-    required this.onChangedNumber,
     required this.onChangedTitle,
     required this.onChangedDescription,
   }) : super(key: key);
@@ -35,15 +33,6 @@ class NoteFormWidget extends StatelessWidget {
                     value: isImportant ?? false,
                     onChanged: onChangedImportant,
                   ),
-                  Expanded(
-                    child: Slider(
-                      value: (number ?? 0).toDouble(),
-                      min: 0,
-                      max: 5,
-                      divisions: 5,
-                      onChanged: (number) => onChangedNumber(number.toInt()),
-                    ),
-                  )
                 ],
               ),
               buildTitle(),

@@ -15,7 +15,7 @@ Future main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  static const String title = 'Notes SQLite';
+  static const String title = 'Notes';
 
   @override
   Widget build(BuildContext context) => MaterialApp(

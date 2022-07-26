@@ -46,7 +46,6 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
             description: description,
             onChangedImportant: (isImportant) =>
                 setState(() => this.isImportant = isImportant),
-            onChangedNumber: (number) => setState(() => this.number = number),
             onChangedTitle: (title) => setState(() => this.title = title),
             onChangedDescription: (description) =>
                 setState(() => this.description = description),
